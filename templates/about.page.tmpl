@@ -1,0 +1,19 @@
+{{template "base" .}}
+{{define "content"}}
+    <header>
+        <h1>About Us</h1> 
+    </header>
+    <main>
+        <p>We are a small web development company based in the United States.</p>
+        <p>Contact us at <a href="mailto:atharvkbhujbal@gmail.com">Mail</a></p>
+
+        {{if .StringMap}}
+            <p>This came from the template: {{index .StringMap "Test"}}</p>
+        {{else}}
+            <p>This came from the template: test value not found</p>
+        {{end}}
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+{{end}}
